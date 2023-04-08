@@ -1,12 +1,9 @@
-import { useState } from 'react';
 import { AiOutlineHome, AiOutlineProject } from 'react-icons/ai';
 import { MdOutlineTask } from 'react-icons/md';
 import { FiCheckSquare, FiUser } from 'react-icons/fi';
 import Link from 'next/link';
-import Modal from './Modal';
 
 const Sidebar = () => {
-    const [isShowModal, setIsShowModal] = useState(false);
     const SidebarArr = [
         {
             step: 'Home',
@@ -40,8 +37,6 @@ const Sidebar = () => {
                     </Link>
                 </div>
             ))}
-            {isShowModal && <Modal heading="akmkamda" />}
-            <button onClick={() => setIsShowModal(!isShowModal)}>Add New Task</button>
         </div>
     );
 };

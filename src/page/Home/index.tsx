@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Sidebar from '../common/Sidebar';
 import clx from '../../../utils/clx';
+import Modal from '../common/Modal';
 
 const Home = () => {
     const [list, setList] = useState<'all-tasks' | 'completed' | 'in-progress' | 'pending'>(
@@ -8,10 +9,13 @@ const Home = () => {
     );
 
     return (
-        <section className="flex">
+        <section className="flex w-full">
             <Sidebar />
             <div className="py-5 px-6">
-                <h1 className="font-semibold text-2xl pb-3">Welcome, User!</h1>
+                <div className="flex w-full justify-between items-center">
+                    <h1 className="font-semibold text-2xl pb-3">Welcome, User!</h1>
+                    <button>Add a New Task</button>
+                </div>
                 <div className="flex border-2 rounded-md">
                     <button
                         onClick={() => setList('all-tasks')}
@@ -50,6 +54,7 @@ const Home = () => {
                         Pending
                     </button>
                 </div>
+                <Modal heading="hello" isShow={true} />
             </div>
         </section>
     );

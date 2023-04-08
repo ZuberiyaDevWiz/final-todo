@@ -14,7 +14,11 @@ const Tabs = () => {
             <div className="p-5">
                 <div className="flex justify-between items-center pb-3">
                     <h1 className="font-semibold text-2xl">Welcome, User!</h1>
-                    <Button text="+ Add New Task" onClick={() => setIsShow(!isShow)} />
+                    <Button
+                        text="+ Add New Task"
+                        colorfill="primary"
+                        onClick={() => setIsShow(!isShow)}
+                    />
                 </div>
                 <div className="flex w-fit border-2 rounded-md">
                     <button

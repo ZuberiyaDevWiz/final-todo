@@ -1,9 +1,10 @@
 import { FC } from 'react';
+import Button from './Button';
 
 const TaskCard: FC = () => (
-    <div className="h-[50%] w-[30%] rounded-xl p-4 ring-1">
+    <div className="h-fit w-[30vw] rounded-xl p-4 ring-1 ring-gray-200">
         <div>
-            <h1 className=" font-semibold text-lg pb-4">Task Card</h1>
+            <h1 className=" font-semibold text-lg pb-2">Task Card</h1>
         </div>
         <div>
             <p className="line-clamp-4 text-[#707070]">
@@ -13,7 +14,8 @@ const TaskCard: FC = () => (
                 culpa deserunt nulla aute deserunt.
             </p>
         </div>
-        <hr className="my-6" />
+        <hr className="my-4" />
+        <Button text="Mark as completed" className="!pb-4" />
     </div>
 );
 

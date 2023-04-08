@@ -3,9 +3,9 @@ import TaskCard from '../common/TaskCard';
 import Tabs from './Tabs';
 
 const Home = () => (
-    <section className="flex">
+    <section className="flex ">
         <Sidebar />
-        <div>
+        <div className="w-full space-y-6 p-5">
             <Tabs />
             <TaskCard />
         </div>

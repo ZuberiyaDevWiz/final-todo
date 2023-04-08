@@ -11,7 +11,7 @@ const Tabs = () => {
         <section className="w-full">
             <div className="p-5">
                 <h1 className="font-semibold text-2xl pb-3">Welcome, User!</h1>
-                <div className="flex border-2 rounded-md">
+                <div className="flex w-fit">
                     <button
                         onClick={() => setList('all-tasks')}
                         className={clx(

@@ -1,7 +1,7 @@
-import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
-import { MdOutlineTask } from "react-icons/md";
-import { FiCheckSquare, FiUser } from "react-icons/fi";
 import Link from "next/link";
+import { AiOutlineHome, AiOutlineProject } from "react-icons/ai";
+import { FiCheckSquare, FiUser } from "react-icons/fi";
+import { MdOutlineTask } from "react-icons/md";
 
 const Sidebar = () => {
   const SidebarArr = [
@@ -30,7 +30,10 @@ const Sidebar = () => {
   return (
     <div className="bg-gray-100 w-fit px-4 pr-10 rounded-md h-screen  py-5 space-y-6">
       {SidebarArr.map((x) => (
-        <div className="flex space-x-7 font-semibold items-center ">
+        <div
+          className="flex space-x-7 font-semibold items-center "
+          key={x.step}
+        >
           <p className="text-2xl">{x.icon}</p>
           <Link href="/" className="hover:scale-105">
             {x.step}

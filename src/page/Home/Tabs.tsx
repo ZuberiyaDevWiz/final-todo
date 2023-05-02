@@ -1,7 +1,8 @@
 import { useState } from "react";
+
 import clx from "../../../utils/clx";
-import Modal from "../common/Modal";
 import Button from "../common/Button";
+import Modal from "../common/Modal";
 
 const Tabs = () => {
   const [isShow, setIsShow] = useState(false);
@@ -17,6 +18,7 @@ const Tabs = () => {
       </div>
       <div className="flex w-fit border-2 rounded-md">
         <button
+          type="button"
           onClick={() => setList("all-tasks")}
           className={clx(
             "px-4 rounded-l-md text-sm py-2 font-semibold ring-1 ring-gray-400",
@@ -26,6 +28,7 @@ const Tabs = () => {
           All Tasks
         </button>
         <button
+          type="button"
           onClick={() => setList("completed")}
           className={clx(
             "px-4  text-sm py-2 font-semibold ring-1 ring-gray-400",
@@ -35,6 +38,7 @@ const Tabs = () => {
           Completed
         </button>
         <button
+          type="button"
           onClick={() => setList("in-progress")}
           className={clx(
             "px-4  text-sm py-2 font-semibold ring-1 ring-gray-400",
@@ -44,6 +48,7 @@ const Tabs = () => {
           In-Progress
         </button>
         <button
+          type="button"
           onClick={() => setList("pending")}
           className={clx(
             "px-4 rounded-r-md text-sm py-2 font-semibold ring-1 ring-gray-400 ",

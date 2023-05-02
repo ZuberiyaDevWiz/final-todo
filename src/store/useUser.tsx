@@ -1,6 +1,7 @@
 import { create } from "zustand";
-import { TypeUser } from "./TypeUser";
-import { persist, createJSONStorage } from "zustand/middleware";
+import { createJSONStorage, persist } from "zustand/middleware";
+
+import type { TypeUser } from "./TypeUser";
 
 interface IUser {
   user: TypeUser | undefined;
